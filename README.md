@@ -16,8 +16,10 @@ It is built as a production-style Streamlit application with modular architectur
 
 ## Live Deployment
 
-Application: https://churniq-dashboard-ai.streamlit.app/  
-Source Code: https://github.com/shariqua06/ChurnIQ  
+Live App: https://churniq-dashboard-ai.streamlit.app/
+
+Status: Production Deployed via Streamlit Cloud  
+CI/CD: Auto deployment via GitHub main branch
 
 ---
 
@@ -44,14 +46,15 @@ Source Code: https://github.com/shariqua06/ChurnIQ
 
 ## Core Features
 
-• Real-time churn prediction with probability scoring  
-• Interactive analytics dashboard with visual insights  
-• Customer-level search and profiling system  
-• Explainability module using feature importance analysis  
-• Revenue tracking and segmentation insights  
-• Secure login system with session management  
-• Role-based access control (Admin, Analyst, Viewer)  
-• Clean UI with modular Streamlit architecture  
+• Real-time AI-based customer churn prediction with probability scoring  
+• Intelligent customer profiling and lookup system using customer ID  
+• Interactive business intelligence dashboard for churn trend analysis  
+• Data-driven revenue tracking and customer segmentation insights  
+• Explainable AI module to interpret model predictions using feature importance  
+• Secure authentication system with role-based access (Admin, Analyst, Viewer)  
+• Session management with login and logout functionality for secure access  
+• Multi-page Streamlit architecture for modular and scalable UI design  
+• End-to-end ML pipeline covering data preprocessing, training, and deployment
 
 ---
 
@@ -122,12 +125,33 @@ Summarizes business KPIs and dataset insights
 
 ---
 
+## System Architecture
+
+Data Layer → Preprocessing Layer → ML Model → Prediction API → Streamlit UI Layer
+
+- Data Layer: CSV + SQLite user database
+- Processing Layer: Pandas + preprocessing pipeline
+- ML Layer: Random Forest classifier trained on telecom dataset
+- Application Layer: Streamlit multipage dashboard
+- Security Layer: Session-based authentication system
+
+---
+
 ## Deployment Strategy
 
 • Hosted on Streamlit Cloud  
 • Connected directly to GitHub repository  
 • Continuous deployment enabled via main branch  
 • Auto-update on every code push  
+
+---
+
+## Impact Simulation
+
+- Identifies high-risk customers before churn occurs
+- Enables targeted retention strategies
+- Helps reduce potential revenue loss through early detection
+- Provides explainable AI decisions for business trust
 
 ---
 
@@ -140,6 +164,17 @@ Summarizes business KPIs and dataset insights
 • Authentication and Session Management  
 • Data Visualization and Business Intelligence  
 • Modular Software Architecture  
+
+---
+
+## Engineering Highlights
+
+- Built modular Python architecture for scalability
+- Implemented session-based authentication system
+- Designed reusable UI components for Streamlit pages
+- Optimized preprocessing pipeline for consistent inference
+- Ensured training-inference feature alignment
+- Deployed production-ready ML web application
 
 ---
 
