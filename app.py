@@ -1,12 +1,15 @@
 import streamlit as st
 from src.database import create_database
 from src.auth import authenticate_user
+from src.utils import load_css
 
 st.set_page_config(
     page_title="ChurnIQ",
     page_icon="📊",
     layout="wide"
 )
+
+load_css()
 
 create_database()
 

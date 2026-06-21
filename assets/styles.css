@@ -1,0 +1,29 @@
+body {
+    background-color: #1B1931;
+}
+
+.main {
+    background-color: #1B1931;
+}
+
+.stSidebar {
+    background-color: #44174E;
+}
+
+.kpi-card {
+    background: #662249;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: #E9C8B9;
+}
+
+div.stButton > button {
+    background-color: #A34054;
+    color: white;
+    border-radius: 10px;
+}
+
+div.stButton > button:hover {
+    background-color: #ED9E59;
+}
