@@ -80,13 +80,24 @@ Viewer: viewer@churniq.com / Viewer@123
             st.error("Invalid Email or Password")
 
 # -------------------------
-# MAIN APP (FIXED UI ONLY)
+# MAIN APP
 # -------------------------
 else:
 
     st.title("ChurnIQ Dashboard")
 
     st.success(f"Logged in as {st.session_state.email} ({st.session_state.role})")
+
+    # =========================
+    # SIDEBAR LOGOUT (NEW)
+    # =========================
+    with st.sidebar:
+        st.markdown(f"### 👤 {st.session_state.email}")
+        st.markdown(f"Role: {st.session_state.role}")
+        st.markdown("---")
+
+        if st.button("🚪 Logout"):
+            logout()
 
     st.markdown("---")
 
@@ -110,7 +121,7 @@ else:
 
     st.markdown("---")
 
-    # SESSION CONTROL
+    # SESSION CONTROL (KEEP OLD ONE ALSO AS YOU REQUESTED)
     st.markdown("### Session Control")
 
     colA, colB = st.columns([1, 5])
