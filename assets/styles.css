@@ -56,3 +56,14 @@ div.stButton > button:hover {
     border-radius: 15px;
     padding: 15px;
 }
+[data-testid="metric-container"] {
+    background: #44174E;
+    border: 2px solid #ED9E59;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+[data-testid="metric-container"] * {
+    color: white !important;
+}

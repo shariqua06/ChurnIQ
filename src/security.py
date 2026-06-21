@@ -1,0 +1,9 @@
+import streamlit as st
+
+def check_login():
+    if "logged_in" not in st.session_state:
+        st.session_state.logged_in = False
+
+    if not st.session_state.logged_in:
+        st.error("🔒 Please login first")
+        st.stop()
