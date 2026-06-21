@@ -31,11 +31,20 @@ p, label, div {
 
 /* Input Boxes */
 .stTextInput input {
-    background-color: #662249;
-    color: white !important;
-    border: 1px solid #A34054;
+    background-color: white !important;
+    color: black !important;
+    border: 2px solid black !important;
 }
-
+.stNumberInput input {
+    background-color: white !important;
+    color: black !important;
+    border: 2px solid black !important;
+}
+div[data-baseweb="select"] > div {
+    background-color: white !important;
+    color: black !important;
+    border: 2px solid black !important;
+}
 /* Buttons */
 div.stButton > button {
     background-color: #A34054;
@@ -44,7 +53,38 @@ div.stButton > button {
     border: none;
     font-weight: bold;
 }
+ /* =========================
+   FIX INPUT TEXT COLOR ONLY
+   (Prediction Page Fix)
+   ========================= */
 
+/* Number inputs (tenure, charges) */
+.stNumberInput input {
+    color: black !important;
+    -webkit-text-fill-color: black !important;
+    caret-color: black !important;
+}
+
+/* Selectbox text (gender, partner, dependents, senior citizen) */
+div[data-baseweb="select"] * {
+    color: black !important;
+}
+
+/* Selected value inside selectbox */
+div[data-baseweb="select"] {
+    color: black !important;
+}
+
+/* Dropdown options */
+div[data-baseweb="popover"] * {
+    color: black !important;
+}
+
+/* Fix weird yellow/auto focus override */
+input:focus {
+    color: black !important;
+    -webkit-text-fill-color: black !important;
+}
 div.stButton > button:hover {
     background-color: #ED9E59;
     color: #1B1931 !important;
