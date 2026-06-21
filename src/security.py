@@ -5,5 +5,5 @@ def check_login():
         st.session_state.logged_in = False
 
     if not st.session_state.logged_in:
-        st.error("🔒 Please login first")
+        st.warning("🔒 Please login to continue")
         st.stop()

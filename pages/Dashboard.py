@@ -2,13 +2,14 @@ import streamlit as st
 from src.utils import load_css
 from src.security import check_login
 from src.data_loader import load_data
+from src.ui import page_header
 
 load_css()
 check_login()
 
-st.title("📊 ChurnIQ Dashboard")
-
 df = load_data()
+
+page_header("📊 ChurnIQ Dashboard", "AI Powered Customer Analytics Overview")
 
 total_customers = len(df)
 churned = len(df[df["Churn"] == "Yes"])
@@ -31,4 +32,5 @@ with col4:
 
 st.divider()
 
+st.markdown("### 📌 Data Preview")
 st.dataframe(df.head(), use_container_width=True)

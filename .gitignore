@@ -1,4 +1,17 @@
+# Virtual environment
 venv/
+.venv/
+
+# Python cache
 __pycache__/
 *.pyc
+
+# Streamlit config
 .streamlit/
+
+# Database (important for security)
+database/users.db
+
+# OS files
+.DS_Store
+Thumbs.db
