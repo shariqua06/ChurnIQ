@@ -178,6 +178,15 @@ Data Layer → Preprocessing Layer → ML Model → Prediction API → Streamlit
 
 ---
 
+## Future Scope
+
+• Can be extended with deep learning models for better accuracy  
+• Can include real-time APIs and cloud database integration  
+• Can be deployed using Docker for scalable production use  
+• Can support automated retraining and real-time data updates
+
+---
+
 ## Author
 
 Shariqua Tabassum G
