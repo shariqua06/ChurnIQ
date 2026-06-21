@@ -1,7 +1,11 @@
 import sqlite3
+import bcrypt
 from pathlib import Path
 
 DB_PATH = Path("database/users.db")
+
+def hash_password(password):
+    return bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
 
 def create_database():
     conn = sqlite3.connect(DB_PATH)
@@ -17,9 +21,9 @@ def create_database():
     """)
 
     users = [
-        ("admin@churniq.com", "Admin@123", "Admin"),
-        ("analyst@churniq.com", "Analyst@123", "Analyst"),
-        ("viewer@churniq.com", "Viewer@123", "Viewer")
+        ("admin@churniq.com", hash_password("Admin@123"), "Admin"),
+        ("analyst@churniq.com", hash_password("Analyst@123"), "Analyst"),
+        ("viewer@churniq.com", hash_password("Viewer@123"), "Viewer")
     ]
 
     for user in users:
@@ -28,8 +32,10 @@ def create_database():
                 "INSERT INTO users (email,password,role) VALUES (?,?,?)",
                 user
             )
-        except:
+        except sqlite3.IntegrityError:
             pass
-
+    cursor.execute("SELECT email, password, role FROM users")
+    print(cursor.fetchall())
+    
     conn.commit()
     conn.close()
